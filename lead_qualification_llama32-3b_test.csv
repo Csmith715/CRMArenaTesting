@@ -1,0 +1,63 @@
+predicted,actual
+"<execute> FIND {00QWt00000893dKMAQ} IN [Recent Discussion] TEXT FIELDS RETURNING UserId AND Phone FROM User </execute>
+
+<respond> UserIds, Phones </respond>","SELECT Id, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893dKMAQ' ORDER BY CreatedDate DESC"
+"<execute> FIND {Yes} IN ['TRUE', 'YEAH'] AND {LeadId} = 00QWt00000899CLMAY SUBJECT IN ['Opportunity'] RETURNING Opportunity(Name, Id) </execute>
+
+# Respond
+If None, then 'None'
+Else, return 'Budget', 'Authority', 'Need', 'Timeline' as appropriate
+
+Note: The above Action command executes an SOQL query to find the opportunity name and ID of the lead when the lead is qualified. The respond action will return the answer if no opportunity is found, otherwise, it will return the BANT factors that the lead qualification failed to meet.","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899CLMAY' ORDER BY CreatedDate DESC LIMIT 10"
+"<execute> FIND IS_TRUE({LeadQualificationGuide__c} = True) AND {Recent_Conversations_Counter__c} >= 3 AND ({Budget__c} OR {Authority__c} OR {Need__c} OR {Timeline__c} < 30) </execute>
+
+This SOQL query will return the opportunity line item where the opportunity line item's product 2 is the product associated with the lead opportunity, the lead opportunity line item's price book entry id is the price book entry for this line item, and the quantity ordered is greater than 0, and the unit price of the product is not zero. This will help you find the order item that corresponds to the opportunity line item associated with the quote associated","SELECT Id, Body__c, LeadId__c, OpportunityId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000898Y2MAI' ORDER BY CreatedDate DESC"
+"<execute> FIND TRUE WHEN {RecentDiscussionDate} IS NOT NULL AND VisitorResponse LIKE '%Yes%' AND QuestionId = 8010 </execute>
+<respond> Yes </respond>
+
+<execute> WHERE NOT TRUE FROM LeadVoiceCallTranscript__c  AND QuestionId = 8010 </execute>
+<respond> None </respond>
+
+<execute> SELECT * FROM Lead WHERE Id = 00QWt00000892pCMAQ AND QualifiedTRUE FROM OpportunityLineItem WHERE OpportunityId = 00QWt00000892pCMAA AND TotalPrice > Amount AND UnitPrice = 75 AND Quantity = 10 </execute>
+<respond> 750 </respond>
+
+Note: 8010 is the ID","SELECT Id, Body__c, CreatedDate, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000892pCMAQ' ORDER BY CreatedDate DESC LIMIT 5"
+"<execute> FIND LatestEmailMessage IN [00QWt00000893q9MAA].Subject CONTAINS 'Discussion' AND LatestEmailMessage.TypeDETOREDATE >= TODAY(-1) RETURNING Lead(Subject, Phone) </execute>
+
+<respond> Subject, Phone </respond>
+
+Note: The above Action command will execute an SOQL query to find the latest email message of the lead 00QWt00000893q9MAA, and return the subject and phone number of the lead. The respond action will return only the subject and phone number of the lead, as required by the task.","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893q9MAA' ORDER BY CreatedDate DESC LIMIT 1"
+"<execute> FIND {UserId} IN OWNER ID AND WHERE CASE Id IS NOT NULL AND Status = 'Qualified' RETURNING Lead(FirstName, Phone, Status) </execute>
+
+This SOQL query will help you find the lead who was qualified based on the owner ID and the case ID. The returning fields will include the lead's first name, phone number, and status.
+
+If the observation from the Salesforce instance is [{UserId, [{FirstName, Phone, Status}]]], you can construct a submit action like this:
+
+<respond> UserId, [FirstName, Phone, Status] </respond>","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI'"
+"<execute> FIND TRUE IF CurrentDate = 2024-12-25 AND NOT ANSWERED ON WHEN THEN RETURN {Budget, Authority, Need, Timeline} ENDIF </execute>
+
+Note: The execute command here is to run a SOQL query that will return the answer based on the conditions mentioned. The respond command will return the final answer to the user question.","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897aPMAQ' ORDER BY CreatedDate DESC"
+"<execute> FIND COUNT() WHERE TranscriptId = 1234567890 AND Subject LIKE '%Should this lead be considered qualified based on their recent discussions?' IN LiveChatTranscript AND SearchIndex = 1 </execute>
+<respond> 1 </respond>
+
+# If the observation from the Salesforce instance is 1, your next step can be
+# Execute an SOQL query to find the relevant knowledge article and a price book entry that can help you understand the budget and authority of the lead.
+# Submit the answer 2.
+
+# Example 1
+# If the observation from the Salesforce instance is 1, your next step can be
+# <execute> SELECT id, PriceBookEntryId, Product2Id, UnitPrice FROM","SELECT Id, Title, FAQ_Answer__c FROM Knowledge__kav WHERE Title LIKE '%BANT%' OR FAQ_Answer__c LIKE '%BANT%'"
+"<execute> FIND {LeadId} IN OBJECT OF Lead WHERE Status = 'Qualified' AND CreatedDate >= TODAY()-1YEAR RETURNING Lead(FirstName, LastName, Phone, Email) </execute>
+
+And, if the lead is not qualified, the response will be:
+<respond> First Name, Last Name, Phone, Email </respond>
+
+For example, if the output from the above query is [{John Doe, 1234567890, johndoe@example.com}] then the response will be:
+John Doe, 1234567890, johndoe@example.com","SELECT Id, Body__c, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897wyMAA'"
+"<execute> FIND IS FALSEY {00QWt00000899ApMAI} IN LEAD QUALIFICATION BASED ON RECENT INTERACTIONS </execute>
+<respond> False </respond>
+
+# If the observation from the Salesforce instance is true, then the reasons for disqualification will be
+# BANT factors like Budget, Authority, Need, and Timeline. Please provide them.
+
+Note: The above Action command execute, will run the SOQL query on the Salesforce instance and return the observation. The respond action will be used to provide the answer based on the observation.","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899ApMAI' ORDER BY CreatedDate DESC"

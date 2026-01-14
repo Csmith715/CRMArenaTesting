@@ -1,0 +1,462 @@
+predicted,actual,model_name
+"
+ nécessaire
+iento
+```sql
+SELECT Id, Body FROM VoiceCallTranscript__c WHERE OwnerId IS NULL AND Not Seen BY [Your Audience] CA 10.3.4.198.3.3.192.1.254.255.254.252.0.0.0.2A.1.2.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0","SELECT Id, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893dKMAQ' ORDER BY CreatedDate DESC",lead_qualification_qwen3_06b_test.csv
+"
+ соответствии с требованиями Salesforce Object Search Language (SOSL) или Salesforce Object Query Language (SOQL), выполните следующую шаг:
+
+1. Объяснение оценки требования: ""Budget"", ""Authority"", ""Need"", ""Timeline"" — это 4 фундаментальных параметра, которые должны быть в ответе, если lead не удастся qualify.
+2. Составьте соответствующую SOSL query, чтобы получить ответ на вопрос ""Which of the following: 'Budget', 'Authority', 'Need', 'Timeline', are the reasons?"". 
+3. Если не найден ответ, воспользуйтесь следующим шагам:
+   - Обосн","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899CLMAY' ORDER BY CreatedDate DESC LIMIT 10",lead_qualification_qwen3_06b_test.csv
+"
+ уверенно. Lead qualification should focus on 'Budget', 'Authority', 'Need', or 'Timeline'. If the lead is not qualified, these factors will be the reasons. If the lead is qualified, these reasons will be the ones we are looking for.
+
+Here is a potential SOQL query to identify the BANT factors that the lead qualification fails to meet:
+
+SELECT BANT_Factors FROM Lead qualification guide WHERE Lead.Id IN [00QWt00000898Y2MAI, 001A0000015892T7UW, 002B0000017456T8A, 003","SELECT Id, Body__c, LeadId__c, OpportunityId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000898Y2MAI' ORDER BY CreatedDate DESC",lead_qualification_qwen3_06b_test.csv
+"
+ necessário
+SELECT Id, Title, Summary, CreatedDate FROM Knowledge__kav WHERE Title IN ['Technology', 'Law', 'Economy', 'Health', 'Environment', 'Climate', 'Water', 'Biodiversity', 'Pollution', 'Crime', 'Sentiment', 'Bias', 'Data', 'Information', 'Quantification', 'Probability', 'Statistics', 'Trend', 'Analysis', 'Interpretation', 'Conceptual', 'Functional', 'Time', 'Task', 'Event', 'Activity', 'Behavior', 'Probability', 'Status', 'Priority', 'Weighted_Sum', 'Budget', 'Authority', 'Need', 'Timeline'] EXCEPT ('Description', 'Title', 'Summary',","SELECT Id, Body__c, CreatedDate, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000892pCMAQ' ORDER BY CreatedDate DESC LIMIT 5",lead_qualification_qwen3_06b_test.csv
+"
+ соответствии требованияам, выполните следующую шаг:
+
+1. Объяснение о том, что такое BANT (Budget, Authority, Need, Timeline) и как они связаны с выбором BANT factors.
+2. Составьте SOQL/SOSL query to identify the relevant BANT factors.
+3. Execute the appropriate Action command to generate the observation or respond with the answer.
+  
+Lead qualification is determined by the BANT factors. Here are the BANT factors that the lead qualification fails to meet:
+
+- Budget
+- Authority
+- Need
+- Timeline
+
+The BANT factors that the lead qualification fails to meet are: ['Budget', 'Authority', 'Need', 'Timeline'].
+
+If the lead","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893q9MAA' ORDER BY CreatedDate DESC LIMIT 1",lead_qualification_qwen3_06b_test.csv
+"
+ уверенно. Let's start by identifying the BANT factors that the lead qualification fails to meet. These factors are responsible for determining the correct BANTs to use.
+
+Looking at the question, we need to determine if the lead qualification fails to meet any of the four BANT factors: 'Budget', 'Authority', 'Need', or 'Timeline'. If they do, we need to find the reasons behind these failures.
+
+After a thorough analysis, here are the BANT factors that the lead qualification fails to meet:
+- 'Budget'
+- 'Authority'
+- 'Need'
+- 'Timeline'
+
+These factors are responsible for determining the correct BANTs to use. If the lead qualification fails to meet any of these factors, we need","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI'",lead_qualification_qwen3_06b_test.csv
+"
+овать
+.Execute
+SELECT Id, Title, Summary FROM Knowledge__kav Where Title 'Lead qualification guide' And Id 'e8f8e4e8e' Return Lead LastName And Producer Lead Owner Id
+
+For the relevant BANT factors, the output should be one or several of the following: 'Budget', 'Authority', 'Need', 'Timeline'. If no BANT factor is identified, return 'NoneOfTheseFactorsisRequired' or 'BALANCE'.
+
+Here is the step-by-step reasoning for each BANT factor:
+
+1. **Budget**: The lead's qualification is related to their budget. If the lead is outside the budget, we should not qualify them.  
+   - Observation: The lead's qualification is related","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897aPMAQ' ORDER BY CreatedDate DESC",lead_qualification_qwen3_06b_test.csv
+"
+ nécessaire
+```sql
+SELECT Id, Title, Summary FROM Knowledge__kav WHERE Title IN ['Inquire', 'Need', 'Learner', 'Experienced', 'Fresh', 'Undecided', 'Proposal', 'Negotiation', 'Closed', 'Draft', 'Needs Review', 'In Review', 'Accepted', 'Denied', 'Approved', 'Rejected', 'Not Submitted', 'Unresolved', 'Deferred', 'Waiting'] AND Id BETWEEN 1 AND 1000000000 AND Title IN ['Professional', 'Inquire', 'Need', 'Learner', 'Experienced', 'Fresh', 'Undecided', 'Proposal', 'Negotiation', 'Closed', '","SELECT Id, Title, FAQ_Answer__c FROM Knowledge__kav WHERE Title LIKE '%BANT%' OR FAQ_Answer__c LIKE '%BANT%'",lead_qualification_qwen3_06b_test.csv
+"
+จำต้องใช้คำวิจารณ์ความคิดเพื่อสรุปผล แต่ไม่สามารถใช้คำวิจารณ์ความคิดวิจารณ์ความคิดได้ จึงดำเนินการต่อไปด้วยคำสั่งดำเนินงานที่เหมาะสมเพื่อสร้างผลลัพธ์ที่น่าเชื่อถือได้
+
+Consider the lead's recent discussions. If the lead qualification fails to meet any of the following BANT factors, identify only one or several of the four BANT factors that the lead qualification fails to meet. Return only a <respond> or <execute>","SELECT Id, Body__c, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897wyMAA'",lead_qualification_qwen3_06b_test.csv
+"
+ necessário
+.Execute to find the BANT factors related to the lead qualification. 
+necessary
+.executestantiality 100,00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899ApMAI' ORDER BY CreatedDate DESC",lead_qualification_qwen3_06b_test.csv
+"<execute> SELECT Id, LeadId__c, Body__c, Title FROM VoiceCallTranscript__c WHERE LeadId__c = $ID </execute>
+brer
+### Response:
+<respond> Joe Smith's voice call transcripts are not well-suited for qualification. The lead's needs and the company's objectives do not align. Among the factors that the lead fails to meet are: 'Authority', 'Need', or 'Timeline'. 'Authority' is about the lead's authority, 'Need' is about the needs of the company, and 'Timeline' is about when the lead will be considered. The lead's needs and the company's objectives",<execute> SELECT Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897TuMAI' ORDER BY CreatedDate DESC </execute>,mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = $ID FILTER ? RETURN Id, LeadId__c, Body__c, Id END </execute>
+<respond> The lead's recent discussions can be considered if they are qualified based on their recent discussions. If they aren't, they can be qualified based on the following BANT factors: 'Budget', 'Authority', 'Need', or 'Timeline'. If they are qualified, return 'None'. Otherwise, return only the four BANT factors that the lead qualification fails to meet. </respond>
+","<execute> SELECT Id, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893dKMAQ' ORDER BY CreatedDate DESC </execute>",mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = $ID AND Body__c LIKE '%need%' AND Id NOT IN (SELECT Id FROM Need__c) </execute>
+","<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899CLMAY' ORDER BY CreatedDate DESC LIMIT 10 </execute>",mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = $ID </execute>
+","<execute> SELECT Id, LeadId__c, OpportunityId__c, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt0000089AJqMAM' ORDER BY CreatedDate DESC </execute>",mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = $ID FILTER (FIND ALL, Name CONTAINS 'need' AND Body__c CONTAINS 'need' AND IsActive = True) ORDER BY CreatedDate DESC </execute>
+","<execute> SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893q9MAA' ORDER BY CreatedDate DESC LIMIT 1 </execute>",mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = $ID FILTER ? RETURN Id, LeadId__c, Body__c, Id END </execute>
+","<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI' </execute>",mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Lead__c WHERE LeadId__c = '00QWt000008946OMAQ' RETURNING Id </execute>
+",<execute> SELECT Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt000008946OMAQ' ORDER BY CreatedDate DESC LIMIT 10 </execute>,mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = $ID FILTER ? WHERE Id NOT IN (SELECT Id FROM Knowledge__kav WHERE Title = 'Need') ORDER BY CreatedDate DESC </execute>
+","<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899ApMAI' ORDER BY CreatedDate DESC </execute>",mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Lead__c WHERE LeadId__c = '00QWt00000895n9MAA' LIMIT 1 </execute>
+","<execute> SELECT Id, Body__c, LeadId__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000895n9MAA' ORDER BY CreatedDate DESC </execute>",mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Opportunity) </execute>
+",<execute> SELECT Id FROM Task WHERE WhatId = '006Wt000007BAXtIAO' AND Status = 'Not Started' </execute>,mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Territory2 WHERE UserId = UserTerritory2AssociationId) </execute>
+",<execute> SELECT StageName FROM Opportunity WHERE Id = '006Wt000007B5S4IAK' </execute>,mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE Priority = 'Not Started' AND WhatId = '006Wt000007BGTeIAO' </execute>
+",<execute> SELECT Id FROM Task WHERE WhatId = '006Wt000007BGTeIAO' AND Status = 'Not Started' </execute>,mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE Priority = 'Not Started' AND OpportunityId = '006Wt000007B41HIAS' </execute>
+",<execute> SELECT Id FROM Task WHERE WhatId = '006Wt000007B41HIAS' AND Status = 'Not Started' </execute>,mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE Priority = 'Not Started' AND WhatId = '006Wt000007B6iuIAC' </execute>
+",<execute> SELECT Id FROM Task WHERE WhatId = '006Wt000007B6iuIAC' AND Status = 'Not Started' </execute>,mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Territory2 WHERE UserId = UserTerritory2AssociationId) AND OwnerId = UserId FROM UserTerritory2Association </execute>
+",<execute> SELECT StageName FROM Opportunity WHERE Id = '006Wt000007BBNVIA4' </execute>,mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Opportunity WHERE Opportunity.Name = 'Not Started') </execute>
+","<execute> SELECT Id, Subject, Status, WhatId FROM Task WHERE WhatId = '006Wt000007BAEXIA4' AND Status = 'Not Started' </execute>",mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE Priority = 'Not Started' AND OpportunityId = '006Wt000007BEy5IAG' </execute>
+",<execute> SELECT StageName FROM Opportunity WHERE Id = '006Wt000007BEy5IAG' </execute>,mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Opportunity WHERE Opportunity.Name = 'Discovery') </execute>
+","<execute> SELECT Id, Subject, Status, WhatId FROM Task WHERE WhatId = '006Wt000007BAuVIAW' AND Status = 'Not Started' </execute>",mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Opportunity WHERE StageName = 'Discovery' 
+AND Id NOT IN (SELECT Id FROM OpportunityAlias 
+WHERE LeadId = Id 
+FILTER (FILTER (FILTER (Lead, LeadId = Id)
+- Id of the Lead
+- Return only the Id of the Lead's Id if the lead's Id is not in the list of Opportunity Id to be considered.
+
+<respond> The tasks marked as 'Not Started' that are not consistent with the opportunity's stage are: 006Wt000007BCMrIAO","<execute> SELECT Id, Subject, Status, WhatId FROM Task WHERE WhatId = '006Wt000007BCMrIAO' AND Status = 'Not Started' </execute>",mixed_deepseek_3b_test_v1a.csv
+"<execute> SELECT Id FROM Task WHERE Priority = 'Not Started' AND WhatId = '006Wt000007B6KgIAK' </execute>
+",<execute> SELECT StageName FROM Opportunity WHERE Id = '006Wt000007B6KgIAK' </execute>,mixed_deepseek_3b_test_v1a.csv
+"
+<execute> POLL ALL USERS FOR THE CURRENT TIME ZONE OF THE LEAD AND THE CURRENT TIME ZONE OF THE CUSTOMER, AND IF THE CUSTOMER IS AFTER 9 PM AND THE LEAD IS BEFORE OR EQUAL TO 9 AM ON THE CUSTOMER'S TIME ZONE, RETURN ['Budget', 'Authority', 'Need', 'Timeline'] </execute>
+<respond> BUG TO ADD - The lead has a need to justify its budget, authority, and timeline. Valid options are: ['Budget', 'Authority', 'Need', 'Timeline'] </","SELECT Id, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893dKMAQ' ORDER BY CreatedDate DESC",lead_qualification_deepseek_3b_test_v2.csv
+"# Execution
+<execute> SELECT Id, Description, VoiceCallTranscript__c, Knowledge__kav FROM VoiceCallTranscript__c, Knowledge__kav WHERE VoiceCallTranscript__c Id = <Identify the Id of the Voice Call Transcript> AND Knowledge__kav Id = <Identify the Id of the Knowledge Article>
+<respond> Budget, Authority, Need, Timeline - Identify the reasons why the lead's voice call transcript and knowledge article can be considered qualified.
+<execute> SELECT Description FROM Knowledge__kav WHERE Id = <Identify the Id of the Knowledge Article>
+<respond> Authority, Need,","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899CLMAY' ORDER BY CreatedDate DESC LIMIT 10",lead_qualification_deepseek_3b_test_v2.csv
+"
+<execute> Find the latest VoiceCallTranscript__c and Lead objects that have the same Lead Id. Return the Body__c and EndTime__c fields. </execute>
+<respond> The lead should be qualified based on their recent conversations. </respond>
+
+OR
+<execute> Find the latest VoiceCallTranscript__c and Lead objects that have the same Lead Id. Return the Body__c and EndTime__c fields. </execute>
+<respond> The lead should be qualified based on their recent conversations. Voice call transcripts and lead information can be found as follows: </respond>
+<execute> SELECT Body__c, EndTime__c FROM","SELECT Id, Body__c, LeadId__c, OpportunityId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000898Y2MAI' ORDER BY CreatedDate DESC",lead_qualification_deepseek_3b_test_v2.csv
+"
+<execute> SOSL query to find the latest voice call transcript associated with the lead and return its body </execute>
+<respond> A summary of the voice call transcript and the reasons behind the voice call transcript and lead qualification fails are: ['Budget', 'Authority', 'Need', 'Timeline'] </respond>
+
+# Output
+<execute> SOSL query to find the latest voice call transcript associated with the lead and return its body </execute>
+<respond> A summary of the voice call transcript and the reasons behind the voice call transcript and lead qualification fails are: ['Budget', 'Authority', 'Need', 'Tim","SELECT Id, Body__c, CreatedDate, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000892pCMAQ' ORDER BY CreatedDate DESC LIMIT 5",lead_qualification_deepseek_3b_test_v2.csv
+"
+<execute> SHOULD BE LIKELY TRUE </execute>
+    <respond> Budget, Authority, Need, Timeline </respond>
+    If the output from the Salesforce instance is ['Budget', 'Authority', 'Need', 'Timeline'] and the lead's latest discussions include ['Budget', 'Authority'] and the lead's latest voice call transcript contains ['Authority', 'Need'] and the lead's latest knowledge article title is 'Job Description' and the lead's name is 'Joe Smith', the should the lead be considered qualified?
+    <execute> VERIFY THE FOLLOWING:
+    - Can you","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893q9MAA' ORDER BY CreatedDate DESC LIMIT 1",lead_qualification_deepseek_3b_test_v2.csv
+"
+<execute> FIND ALL DISCLOSEMENTS OF Lead AND ALL ITERM IN DISCLOUNCEMENTS OBJECT AND ALL ITERM IN KNOWLEDGE ARTICLES ON THE WEB THAT CAN BE USED TO FIND THE CORRELATION BETWEEN THE LEAD AND THE KNOWLEDGE ARTICLES.
+<respond> DISCLOUNCEMENTS OF LEAD AND ITERM IN DISCLOUNCEMENTS OBJECT AND ALL ITERM IN KNOWLEDGE ARTICLES ON THE WEB
+    (e.g. 'Introduction to Product', 'Case Study', 'Case","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI'",lead_qualification_deepseek_3b_test_v2.csv
+"
+<execute> POLL ALL LEADS THAT ARE CURRENTLY SUBMITTED TO ANT RESPONDER </execute>
+<respond> CAN BE UNDERSTANDED IF THE LEAD IS CURRENTLY SUBMITTED TO A RESPONDER, THE FOLLOWING BANT FACTORS CAN BE USED TO JUDGE IF THE LEAD IS CAN BE CALLED QUALIFIED: ['Budget', 'Authority', 'Need', 'Timeline'] </respond>
+
+<execute> FIND {Joe Smith} IN NAME FIELDS RUNNING AN EmailMessage ONE LEAD AND","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897aPMAQ' ORDER BY CreatedDate DESC",lead_qualification_deepseek_3b_test_v2.csv
+"
+<execute> FIND ALL DISCLOSEMENTS OF Lead WHERE LeadId = {LeadId} AND Body~LIKE%Your voice call transcripts% RETURN ID, Content, OwnerId, OwnerEmail, CreatedDate, EndDateTime, EndEmailDate, EmailMessageId, EmailMessageBody, EmailMessageFrom, EmailMessageTo, StatusFIELDS ROWS 100
+<respond> The lead can be qualified based on their recent discussions. </respond>
+        OR
+<execute> SELECT FAKELIFECYCLE_NAME FROM Territory2_Leaf_Node WHERE UserTerritory2Association_Id = {AssociationId","SELECT Id, Title, FAQ_Answer__c FROM Knowledge__kav WHERE Title LIKE '%BANT%' OR FAQ_Answer__c LIKE '%BANT%'",lead_qualification_deepseek_3b_test_v2.csv
+"
+<execute> FIND {Joe Smith} IN NAME FIELDS RUNNING AN EmailMessage ON Lead AND EmailMessage {1234567890} </execute>
+<respond> Joe Smith, 1234567890 </respond>
+
+# Output
+<respond> Identify the reasons for the lead qualification failure. </respond>
+<execute> SELECT FIND {Joe Smith} IN EmailMessage FIELD EmailMessage AND EmailMessage {1234567890} FROM EmailMessage </execute>
+<respond> Authority, Need, Timeline </respond>
+
+# Explanation","SELECT Id, Body__c, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897wyMAA'",lead_qualification_deepseek_3b_test_v2.csv
+"# Execution
+<execute> SELECT Body__c, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = <Lead Id> AND OpportunityId__c = <Opportunity Id>
+<respond> Budget, Authority, Need, Timeline - ['Description of the voice call transcript] ['Description of the knowledge article']
+<execute> SELECT Description__c FROM Issue__c WHERE Id = <Issue Id>
+<respond> [Description of the voice call transcript] [Description of the knowledge article]
+
+# Response
+<execute> SELECT Body__c, 10000000001A00000","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899ApMAI' ORDER BY CreatedDate DESC",lead_qualification_deepseek_3b_test_v2.csv
+"<execute> FIND {Joe Smith} IN NAME FIELDS RETURNING Lead(Name, Phone) AND TextBody LIKE '%need%' AND TextBody LIKE '%authority%' AND TextBody LIKE '%budget%' AND TextBody LIKE '%timeline%' </execute>
+    <respond> Need, Authority, Budget, Timeline </respond>
+
+# Salesforce observation
+The Salesforce observation can be any description or ID that helps the agent understand the state of the lead and the reasons why the lead is not being qualified. For example, the agent might say 'Need' if the lead is needing a new job, 'Authority' if the lead is","SELECT Id, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893dKMAQ' ORDER BY CreatedDate DESC",lead_qualification_deepseek_3b_test_v1.csv
+"<execute> FIND {Joe Smith} IN NAME FIELDS RETURNING Lead(Name, Phone) AND Opportunity(Id, Name, Account, Contact, Case, Name) AND Knowledge__kav(Title, Body) AND EmailMessage(FromAddress, Content) AND LiveChatTranscript(Body, Account) AND Case(Id, Name, Account, Contact, Owner, Status) AND Task(Subject) AND Event(SubSubject) AND Territory2(Name) AND UserTerritory2Association(Territory2Id, Territory2) AND Lead(Id, Company, ConvertedAccountId, ConvertedContactId, ConvertedDate, Email, FirstName","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899CLMAY' ORDER BY CreatedDate DESC LIMIT 10",lead_qualification_deepseek_3b_test_v1.csv
+"<execute> FIND {Joe Smith} IN NAME FIELDS RETURNING Lead(Name, Phone, Conversation__c) </execute>
+    <respond> Joe Smith, 1234567890 </respond> OR <respond> The name is Joe Smith and the phone number is 1234567890 </respond>
+
+# Observation
+From the Salesforce instance, we can find the latest conversation of Joe Smith. This can be done using the following SOQL query:
+
+    SELECT CreatedDate, ContactId, Phone, Name, Body FROM Conversation__c WHERE LeadId__c = JOE SMITH","SELECT Id, Body__c, LeadId__c, OpportunityId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000898Y2MAI' ORDER BY CreatedDate DESC",lead_qualification_deepseek_3b_test_v1.csv
+"<execute> FIND {Joe Smith} IN NAME FIELDS RETURNING Lead(Name, Phone, VoiceCallTranscript__c, Knowledge__kav) </execute>
+    <respond> Joe Smith, 1234567890, https://something.salesforce.com/voicecalltranscript__c?searchTerm=Joe+Smith, Find the latest voice call transcript for Joe Smith on Salesforce. </respond>
+
+# System Observation
+The Salesforce instance contains a lead with the name Joe Smith, a phone number 1234567890, and a voice call transcript and a","SELECT Id, Body__c, CreatedDate, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000892pCMAQ' ORDER BY CreatedDate DESC LIMIT 5",lead_qualification_deepseek_3b_test_v1.csv
+"<execute> FIND {Joe Smith} IN NAME FIELDS RETURNING Lead(Name, Phone) </execute>
+    (If the observation from the Salesforce instance is [{Joe Smith, 1234567890}], your next step can be)
+<respond> Joe Smith, 1234567890 </respond>
+    (Can be used to find the latest voice call transcript related to Joe Smith)
+VoiceCallTranscript__c vct;
+JOIN VoiceCallTranscript__c vct ON l.Id = vct.LeadId__c
+  AND vct.Body__","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893q9MAA' ORDER BY CreatedDate DESC LIMIT 1",lead_qualification_deepseek_3b_test_v1.csv
+"<execute> FIND ALL VALUES(Knowledge__kav__c) WHICH LEAD_ID_C, Id IN SELECTED_CASES AND Knowledge__kav__c, Title IN ['Voice Call Transcript for Joe Smith'] RETURN KIDOFKNOWLEDGE, TEXT, WEIGHTED_CREATED_DATE, 100 - DISCRETION
+  </execute>
+  <respond> Joe Smith, Budget, Authority, Need, Timeline </respond>
+
+# Description
+The lead Joe Smith is qualified based on the following factors:
+- Budget: The budget for the opportunity should be in line with the expected cost and the current","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI'",lead_qualification_deepseek_3b_test_v1.csv
+"<execute> FIND {Joe Smith} IN NAME FIELDS RETURNING Lead(Name, Phone) AND Opportunity(Id, Name, Account, Contact, Case, Name) AND Knowledge__kav(Title, Content) WHERE Lead(Phone) LIKE '1234567890' AND Opportunity(Case, Id, Name, Account, Contact) = '00QWt00000897aPMAQ' AND Knowledge__kav(Title) = 'Voice call transcripts for Joe Smith' AND VoiceCallTranscript__c(Body) LIKE '12345678","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897aPMAQ' ORDER BY CreatedDate DESC",lead_qualification_deepseek_3b_test_v1.csv
+"<execute> FIND {Joe Smith} IN NAME FIELDS RETURNING Lead(Name, Phone, VoiceCallTranscript__c, Description) </execute>
+    <respond> Joe Smith, 1234567890, https://something.salesforce.com/voicecalltranscript__c?id=<JO voice call transcript ID>, Discusses about new opportunity and budget. </respond>
+
+# OR
+<execute> SELECT COUNT() FROM Lead L, VoiceCallTranscript__c V, Opportunity O
+WHERE L.Id = L.ConvertedId AND V.Id = V.LeadId__c AND","SELECT Id, Title, FAQ_Answer__c FROM Knowledge__kav WHERE Title LIKE '%BANT%' OR FAQ_Answer__c LIKE '%BANT%'",lead_qualification_deepseek_3b_test_v1.csv
+"<execute> SELECT Id, Need__c, Authorization__c, Budget__c, Timeline__c FROM Lead WHERE Id = {THIS} AND Status = 'Contacted' </execute>
+<respond> Budget, Authority, Need, Timeline </respond>
+
+# System Observation
+The Salesforce instance contains a lead with the ID 00QW00000897wymA and is currently being discussed by a user with the username john doe. The lead has been contacted and is in the 'Contacted' status. The lead's budget, authority, need, and timeline have been identified. The need for the lead is","SELECT Id, Body__c, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897wyMAA'",lead_qualification_deepseek_3b_test_v1.csv
+"<execute> SELECT Body__c, LeadId__c, OpportunityId__c FROM VoiceCallTranscript__c WHERE LeadId__c = lead_id__c AND OpportunityId__c = opportunity_id__c </execute>
+    <respond> Budget, Authority, Need, Timeline </respond>
+
+# System Observation
+The Salesforce instance contains a single lead with ID 001W000000899ApMAI and is related to an opportunity with ID 00CW000000Fv9KAAE. The lead has a voice call transcript with the text 'Speak with your execut","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899ApMAI' ORDER BY CreatedDate DESC",lead_qualification_deepseek_3b_test_v1.csv
+"<execute>Lead Id to be considered is: 00QWt00000893dKMAQ</execute>
+
+This lead has recently discussed the impact of the economic downturn on their business and how it has affected their revenue. They also mentioned that they are looking for a solution that can help them grow their business in the post-recession era. Based on these discussions, it seems that this lead may not be a good fit for our services as they are looking for a solution that can help them grow their business in the post-recession era, which is outside our typical service scope.","SELECT Id, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893dKMAQ' ORDER BY CreatedDate DESC",lead_qualification_llama32-3b_test_v2.csv
+"<execute>Lead Id to be considered is: 00QWt00000899CLMAYT1234</execute>
+
+This lead has recently discussed the budget, and the discussion indicates that the budget is not a concern. However, the lead's recent discussions also indicate that the timeline is a concern, as they mentioned that the decision needs to be made within a specific timeframe.","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899CLMAY' ORDER BY CreatedDate DESC LIMIT 10",lead_qualification_llama32-3b_test_v2.csv
+"<execute>SELECT LeadVoiceCallTranscript__c FROM Lead (where LeadId__c = '00QWt00000898Y2MAI' AND LeadVoiceCallTranscript__c IS NOT NULL)</execute>
+
+This will return the lead's voice call transcripts, which can be used to justify the lead qualification. If the lead's recent conversations are unconvincing, the lead qualification fails to meet 'Budget', 'Authority', 'Need', or 'Timeline'.","SELECT Id, Body__c, LeadId__c, OpportunityId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000898Y2MAI' ORDER BY CreatedDate DESC",lead_qualification_llama32-3b_test_v2.csv
+"<execute>SELECT VoiceCallTranscript__c, LeadId__c FROM Lead WHERE LeadId__c = 00QWt00000892pCMAQ</execute>
+
+OR
+
+<respond>Timeline</respond>","SELECT Id, Body__c, CreatedDate, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000892pCMAQ' ORDER BY CreatedDate DESC LIMIT 5",lead_qualification_llama32-3b_test_v2.csv
+"<execute>LeadId__c = 00QWt00000893q9MAA</execute>
+<respond>None</respond>
+
+OR
+
+<execute>SELECT VoiceCallTranscript__c, Knowledge__kav__title FROM Lead WHERE Id = 00QWt00000893q9MAA</execute>","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893q9MAA' ORDER BY CreatedDate DESC LIMIT 1",lead_qualification_llama32-3b_test_v2.csv
+"<execute>LeadId__c = 00QWt00000899NgMAI</execute>
+        <respond>Budget</respond>
+        <respond>Authority</respond>
+        <respond>Need</respond>
+        <respond>Timeline</respond>","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI'",lead_qualification_llama32-3b_test_v2.csv
+"<execute>Lead Id to be considered is: 00QWt00000897aPMAQ</execute>
+ 
+The lead's recent discussions indicate that they are interested in the product, but the discussions did not lead to a proposal. This suggests that the lead's need is not yet met, and therefore, 'Need' should be considered as a reason for not qualifying the lead. 
+
+<respond>Need</respond>","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897aPMAQ' ORDER BY CreatedDate DESC",lead_qualification_llama32-3b_test_v2.csv
+"<execute>LeadId__c = 00QWt0000089A5CMAU AND VoiceCallTranscript__c IN (SELECT LeadId__c FROM LiveChatTranscript__emtery) </execute>
+        <respond>Timeline</respond>","SELECT Id, Title, FAQ_Answer__c FROM Knowledge__kav WHERE Title LIKE '%BANT%' OR FAQ_Answer__c LIKE '%BANT%'",lead_qualification_llama32-3b_test_v2.csv
+"<execute>Lead Id to be considered is: 00QWt00000897wyMAA</execute>
+ 
+<respond>Budget</respond>
+<respond>Need</respond>","SELECT Id, Body__c, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897wyMAA'",lead_qualification_llama32-3b_test_v2.csv
+"<execute>LeadId__c = 00QWt00000899ApMAI</execute>
+<respond>Timeline</respond>","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899ApMAI' ORDER BY CreatedDate DESC",lead_qualification_llama32-3b_test_v2.csv
+" standpoint of this question is to determine whether a lead should be included in any future analysis or reporting task. If so, which BANT factors are relevant? (Do not return any unrelated BANT factors! Instead, focus and utilize the BANT verbs.) 
+
+For each BANT factor, if the relevant BANT factor does NOT exist, do not assign it to this question. If returning an <execute> action, be sure to use the proper Salesforce Object Search Language (SOSL) syntax for transforming the domain knowledge you've gathered from the Salesforce instance or for guiding your search through the relevant fields. 
+
+Here is a potential SOQL query to help you with your task:
+execute
+         SOT From 'Lead_Keyword_Search_Text'
+","SELECT Id, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893dKMAQ' ORDER BY CreatedDate DESC",lead_qualification_qwen3_06b_test_v2.csv
+"
+SELECT Id, LeadId, AccountId FROM Lead WHERE FirstName 'John' AND LastName 'Smith' ORDER BY CreatedDate DESC; LIMITED RESULTS 10;
+The output might be:
+<execute> SELECT Id, LeadId, AccountId FROM Lead WHERE FirstName 'John' AND LastName 'Smith' ORDER BY 3000 - 10000 0000 10000 0000 0000 0000 E1E1C0F000E1E1C0HNVXZTJ9K4YWBGK9  10  10  10  ","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899CLMAY' ORDER BY CreatedDate DESC LIMIT 10",lead_qualification_qwen3_06b_test_v2.csv
+"
+SELECT Id, LeadId, RelatedToId, RelatedToEntity, RelatedToSize, RelatedToValue FROM Lead RelatedTo Contact With Related Contact Days Earned Authority. (The relevant fields for the BANT factors are described in the Object Descriptions section above.)
+
+FAILURES TO MET THE FOLLOWING TALENTS: 'What Ids Are Relevant For The Lead Qualification?', 'What The Authorities Of The Lead Should Be?', 'What The Lead Needs To Know For The Opportunity?', 'What The Lead Needs To Know For The Authority?', AND 'What The Lead Needs To Know For The Timeline?'.
+
+The BANT factors that the lead qualification fails to meet are: (Your task requires returning one or few BANT items from","SELECT Id, Body__c, LeadId__c, OpportunityId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000898Y2MAI' ORDER BY CreatedDate DESC",lead_qualification_qwen3_06b_test_v2.csv
+"关乎领航资格的必要因素包括'Budget', 'Authority', 'Need', 或 'Timeline'。需要判断哪些因素导致领航资格不达标。请根据BANT标准返回一个或多个BANT因素的列表。例如: ['Status', 'InApprovalProcess', 'Deadline%', '0.5'}, 或是SOLO查询语句。
+
+如果返回一个动作，请确保用法正确。例如:  
+<execute>  
+SELECT Id, Title, Summary FROM Lead  
+</execute>  
+或简单返回需要分析的部分:  
+<respond> The lead is qualified based on recent discussions. </respond>
+
+否则，若领航资格不达标，需从BANT因子中选出一个或多个进行验证","SELECT Id, Body__c, CreatedDate, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000892pCMAQ' ORDER BY CreatedDate DESC LIMIT 5",lead_qualification_qwen3_06b_test_v2.csv
+"关乎于领悜 qualification 的 BANT factors (Need, Authority, Budget, Timeline) 是什麼?
+
+BANT factors can be one or more of the following, listed in sorted order:
+- AccountId
+- AccountNumber
+- AnnualNumber
+- AnnualizedReturnRate
+- AreaCode
+- Body
+- ConfidenceInches
+- ContactId
+- ConfidenceChildIndex
+- ContactTypeId
+- CountedBy24H
+- ConfidenceScaleAngle1
+- ConfidenceScaleFactor
+- ConfidenceScaleName
+- CountedSubjectId
+- EventId
+- OpportunityLineItemID
+- OpportunityLineItemObjectId
+- OpportunityLineItemTypeId
+- LeadAccountId
+- AgencyName
+- AuthorityScannedContactId
+-","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893q9MAA' ORDER BY CreatedDate DESC LIMIT 1",lead_qualification_qwen3_06b_test_v2.csv
+"关乎lead qualification的BANT factors (是否需要从A到B中的某项)：
+- Budget
+- Authority
+- Need
+- Timeline
+
+The question is asking us to determine if the lead is qualified (BANT) and justify their absence. If not, is it due to any of the four BANT factors mentioned earlier.
+
+Consider the following steps to answer this question:
+1. Analyze the 'WhatId' and 'OwnerId' from the EmailMessage object to find the relevant Opportunity ID.
+2. Use the Opportunity ID to retrieve the 'OpportunityLineItem' and 'OpportunityLineItem_Pricebook2' objects.
+3. For each relevant Line Item, retrieve the 'VoiceCallTranscript__c' and","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI'",lead_qualification_qwen3_06b_test_v2.csv
+"关乎lead qualification的考量，是否应考虑'Budget'因素？若不被充分考量，需返回一个或多个BANT因素。
+
+这个问题的答案将基于lead qualification的必要性，而BANT因素包括：Budget、Authority、Need、Timeline。如果lead未被qualified，需返回一个或几个BANT因素。
+
+举个例子，如果lead应被qualified，返回的Action可能是：
+<execute> S3ESEAL0000N897aPMAQ FACTION BY SOQL FETCHED FIELDS FROM BETA STANDALONEATORSuscatCafe CAUSE BY 'SELECT \| $t$t Alias YYYY-MM-DD YYYY-MM-DD YYYY*YB' 100","SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897aPMAQ' ORDER BY CreatedDate DESC",lead_qualification_qwen3_06b_test_v2.csv
+"
+SELECT Id, LeadId, RelatedToId, RelatedToEntity, RelatedToSize, WhatId FROM Lead  WHERE RelatedToEntity IS Account AND RelatedToEntity IS Contact AND RelatedToSize IS 100 PER 10 DAY AND WhatId IS Account ID RELATED TO User TERREITAL 2 AND OwnerId IS USER TERREITAL 2 ASSOCIATION ID RELATED TO USER TERREITAL 2 AGNIST AND STATUS IS Activated FALESCALE 100 PER 24 HOURS 3.0 4.2 5.6 7.8 12.4 13.8 14.5 15.7 1","SELECT Id, Title, FAQ_Answer__c FROM Knowledge__kav WHERE Title LIKE '%BANT%' OR FAQ_Answer__c LIKE '%BANT%'",lead_qualification_qwen3_06b_test_v2.csv
+"关乎于领悜 qualification 的 BANT factors 是:
+- IsQualified? Yes
+- Confidence Level? 0.8
+- Relevant Assets? Lead related knowledge articles
+- Lead Id? 00QWt00000897wyMAA
+合理的 BANT factors 是: ['Authority"", 'Need', 'Timeline'].
+相关 SOIL 查询: SELECT Id FROM Pricebook2 WHERE Body LIKE '$lead_name_budget_steering_system%$' AND ValidFrom='01-01-09T00:00:00ZTAPM' AND ValidTo='01-10-09T00:00:00ZTAPM'","SELECT Id, Body__c, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897wyMAA'",lead_qualification_qwen3_06b_test_v2.csv
+"关乎lead qualification，需依据BANT因子判断其是否应被排除。返回仅一个或几个有效BANT因子的名称。例如：返回['Budget', 'Timeline'] 或 '<execute>...</execute>' 或 '<respond> Budget. Budget is unlikely to be spent on this opportunity. </respond>'。
+
+具体需求：
+1. 从BANT因子中选出可能的qualifying factors（4个）。
+2. 根据lead qualification的必要性，决定是否要包含这些因子在BANT中。
+3. 如果不包含，返回'Banned' 或 'Banned Contact'。
+4. 如果包含，返回有效的BANT因子名称（3个）或相关描述（2个）。
+
+已","SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899ApMAI' ORDER BY CreatedDate DESC",lead_qualification_qwen3_06b_test_v2.csv
+<execute> FIND {00QWt00000893dKMAQ} IN NAME FIELDS RETURNING Lead(Id) </execute>,"SELECT Id, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893dKMAQ' ORDER BY CreatedDate DESC",lead_qualification_qwen3_4b_test_v1.csv
+<execute> FIND {00QWt00000899CLMAY} IN NAME FIELDS RETURNING Lead(Id) </execute>,"SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899CLMAY' ORDER BY CreatedDate DESC LIMIT 10",lead_qualification_qwen3_4b_test_v1.csv
+<execute> FIND {00QWt00000898Y2MAI} IN NAME FIELDS RETURNING Lead(Id) </execute>,"SELECT Id, Body__c, LeadId__c, OpportunityId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000898Y2MAI' ORDER BY CreatedDate DESC",lead_qualification_qwen3_4b_test_v1.csv
+<execute> FIND {00QWt00000892pCMAQ} IN NAME FIELDS RETURNING Lead(Id) </execute>,"SELECT Id, Body__c, CreatedDate, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000892pCMAQ' ORDER BY CreatedDate DESC LIMIT 5",lead_qualification_qwen3_4b_test_v1.csv
+<execute> FIND {00QWt00000893q9MAA} IN NAME FIELDS RETURNING Lead(Id) </execute>,"SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893q9MAA' ORDER BY CreatedDate DESC LIMIT 1",lead_qualification_qwen3_4b_test_v1.csv
+<execute> FIND {00QWt00000899NgMAI} IN NAME FIELDS RETURNING Lead(Id) </execute>,"SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI'",lead_qualification_qwen3_4b_test_v1.csv
+<execute> FIND {00QWt00000897aPMAQ} IN NAME FIELDS RETURNING Lead(Id) </execute>,"SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897aPMAQ' ORDER BY CreatedDate DESC",lead_qualification_qwen3_4b_test_v1.csv
+<execute> FIND {00QWt0000089A5CMAU} IN NAME FIELDS RETURNING Lead(Id) </execute>,"SELECT Id, Title, FAQ_Answer__c FROM Knowledge__kav WHERE Title LIKE '%BANT%' OR FAQ_Answer__c LIKE '%BANT%'",lead_qualification_qwen3_4b_test_v1.csv
+<execute> FIND {00QWt00000897wyMAA} IN NAME FIELDS RETURNING Lead(Id) </execute>,"SELECT Id, Body__c, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897wyMAA'",lead_qualification_qwen3_4b_test_v1.csv
+<execute> FIND {00QWt00000899ApMAI} IN NAME FIELDS RETURNING Lead(Id) </execute>,"SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899ApMAI' ORDER BY CreatedDate DESC",lead_qualification_qwen3_4b_test_v1.csv
+"### Response:
+<execute> SELECT Id, LeadId__c, Body__c, Title FROM VoiceCallTranscript__c WHERE LeadId__c = $ID </execute>
+brer
+### Response:
+<respond> Joe Smith's voice call transcripts are not well-documented. Only recent discussions with Joe Smith are labeled with relevant knowledge articles. Returned actions are: <execute> SELECT Id, LeadId__c, Body__c, Title FROM VoiceCallTranscript__c WHERE LeadId__c = $ID </execute>
+",<execute> SELECT Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897TuMAI' ORDER BY CreatedDate DESC </execute>,mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = $ID FILTER ? RETURN Id, LeadId__c, Body__c, Id END </execute>
+<respond> The lead's recent discussions can be considered if they meet the following criteria: 1) They have a proper voice call transcript. 2) The transcript is relevant and not just a guide. 3) The transcript does not claim the lead qualification failure. 4) The transcript does not justify the lead qualification failure. If any of the above four criteria are not met, return the four BANT factors","<execute> SELECT Id, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893dKMAQ' ORDER BY CreatedDate DESC </execute>",mixed_deepseek_3b_test_v2a.csv
+"# Response:
+<execute> SELECT Id FROM Lead__c WHERE LeadId__c = '00QWt00000899CLMAY### Lead Id to be considered </execute>
+
+# Observation
+The lead's recent discussions do not meet the requirements for qualification. The lead's recent discussions are based on the 'Need' and 'Budget' criteria. The lead's recent discussions do not meet the 'Need' criteria, i.e., the lead is not ready to meet their needs. The lead's recent discussions do not meet the 'Budget' criteria, i.e., the lead's total value of the opportunity does not","<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899CLMAY' ORDER BY CreatedDate DESC LIMIT 10 </execute>",mixed_deepseek_3b_test_v2a.csv
+"# Response
+<execute> SELECT Id, Body__c, LeadId__c, OpportunityId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt0000089AJqMAM' ORDER BY CreatedDate DESC </execute>
+        </respond>
+If the lead is not qualified, consider looking at the following factors:
+
+- 'Budget': If the lead is associated with a project or opportunity that does not meet the expected or desired outcomes.
+
+- 'Authority': If the lead is not owned or managed by the appropriate team or organization.
+
+- 'Need': If the lead does not meet","<execute> SELECT Id, LeadId__c, OpportunityId__c, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt0000089AJqMAM' ORDER BY CreatedDate DESC </execute>",mixed_deepseek_3b_test_v2a.csv
+"# Response:
+<execute> SELECT Id FROM Lead__c WHERE LeadId__c = '00QWt00000893q9MAA' AND IsConverted = FALSE ORDER BY Priority __c, Status __c, Subject __c, Description __c, Title __c, Company, CompanySignedDate, ConvertedDate, ConvertedContactId, ConvertedAccountId, LastName, FirstName, Phone, Email, Title, Status, LeadId__c, WhatId __c, Id OFFSET 0 -- Number of FAQs to be considered. </execute>
+        <respond> Lead Id to be considered is: 00QWt0","<execute> SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893q9MAA' ORDER BY CreatedDate DESC LIMIT 1 </execute>",mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI' ORDER BY CreatedDate DESC </execute>
+","<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI' </execute>",mixed_deepseek_3b_test_v2a.csv
+"# Response:
+<execute> SELECT Id FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt000008946OMAQ' ORDER BY CreatedDate DESC </execute>
+
+# Observation
+Among the recent discussions, no mention of 'Budget', 'Authority', 'Need', or 'Timeline' was found for this lead.
+
+</respond>
+If the lead's qualification fails to meet one or more of the four BANT (Budget, Authority, Need, Timeline) factors, return one of the following options:
+
+<execute> SELECT Id FROM VoiceCallTranscript",<execute> SELECT Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt000008946OMAQ' ORDER BY CreatedDate DESC LIMIT 10 </execute>,mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = $ID WHERE Id NOT IN (SELECT Id FROM Opportunity __clb WHERE Knowledge__kav Id IN (SELECT Id FROM Knowledge__kav __cj WHERE Knowledge__kav__c Id = [SELECT Id FROM Knowledge__kav_Alias__lj WHERE Knowledge__kav__c Id = [SELECT Id FROM Knowledge__kav_Title__lj WHERE Knowledge__kav__c Id = Id])) </execute>
+brer
+<respond> The lead's recent voice call transcripts and corresponding","<execute> SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899ApMAI' ORDER BY CreatedDate DESC </execute>",mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Lead__c WHERE LeadId__c = '00A9Wt00000895n9MAA' ORDER BY IsConvertedDate DESC, CreatedDate DESC, LastName DESC LIMIT 1 </execute>
+","<execute> SELECT Id, Body__c, LeadId__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000895n9MAA' ORDER BY CreatedDate DESC </execute>",mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Opportunity) </execute>
+",<execute> SELECT Id FROM Task WHERE WhatId = '006Wt000007BAXtIAO' AND Status = 'Not Started' </execute>,mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Territory2 WHERE UserId = UserTerritory2AssociationId) </execute>
+",<execute> SELECT StageName FROM Opportunity WHERE Id = '006Wt000007B5S4IAK' </execute>,mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE Priority = 'Not Started' AND WhatId = Id FROM Opportunity LIMIT 1 </execute>
+",<execute> SELECT Id FROM Task WHERE WhatId = '006Wt000007BGTeIAO' AND Status = 'Not Started' </execute>,mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE Priority = 'Not Started' AND Subject = 'Opportunity' AND OpportunityId = '006Wt000007B41HIAS' </execute>
+",<execute> SELECT Id FROM Task WHERE WhatId = '006Wt000007B41HIAS' AND Status = 'Not Started' </execute>,mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE Priority = 'Not Started' AND WhatId = '006Wt000007B6iuIAC' </execute>
+",<execute> SELECT Id FROM Task WHERE WhatId = '006Wt000007B6iuIAC' AND Status = 'Not Started' </execute>,mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Territory2 WHERE UserId IS NOT NULL AND Name IN ('CA', 'IL', 'AL')) LIMIT 1 </execute>
+",<execute> SELECT StageName FROM Opportunity WHERE Id = '006Wt000007BBNVIA4' </execute>,mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Opportunity WHERE Opportunity.Name = 'Not Started') </execute>
+","<execute> SELECT Id, Subject, Status, WhatId FROM Task WHERE WhatId = '006Wt000007BAEXIA4' AND Status = 'Not Started' </execute>",mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE Priority = 'Not Started' AND OpportunityId = '006Wt000007BEy5IAG' </execute>
+",<execute> SELECT StageName FROM Opportunity WHERE Id = '006Wt000007BEy5IAG' </execute>,mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Opportunity WHERE Opportunity.Name = 'Discovery') </execute>
+","<execute> SELECT Id, Subject, Status, WhatId FROM Task WHERE WhatId = '006Wt000007BAuVIAW' AND Status = 'Not Started' </execute>",mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE StageId NOT IN (SELECT Id FROM Opportunity WHERE StageId IN ('Qualification', 'Discovery', 'Quote', 'Negotiation', 'Closed')) ORDER BY Id DESC LIMIT 10 </execute>
+","<execute> SELECT Id, Subject, Status, WhatId FROM Task WHERE WhatId = '006Wt000007BCMrIAO' AND Status = 'Not Started' </execute>",mixed_deepseek_3b_test_v2a.csv
+"### Response:
+<execute> SELECT Id FROM Task WHERE Priority = 'Not Started' AND WhatId = '006Wt000007B6KgIAK' </execute>
+",<execute> SELECT StageName FROM Opportunity WHERE Id = '006Wt000007B6KgIAK' </execute>,mixed_deepseek_3b_test_v2a.csv
+your generation,"SELECT Id, Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893dKMAQ' ORDER BY CreatedDate DESC",lead_qualification_qwen3_4b_test_v2.csv
+your-generated-response,"SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899CLMAY' ORDER BY CreatedDate DESC LIMIT 10",lead_qualification_qwen3_4b_test_v2.csv
+your generation,"SELECT Id, Body__c, LeadId__c, OpportunityId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000898Y2MAI' ORDER BY CreatedDate DESC",lead_qualification_qwen3_4b_test_v2.csv
+your generation obeyes the instructions,"SELECT Id, Body__c, CreatedDate, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000892pCMAQ' ORDER BY CreatedDate DESC LIMIT 5",lead_qualification_qwen3_4b_test_v2.csv
+recently associated voice call transcripts with the lead,"SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000893q9MAA' ORDER BY CreatedDate DESC LIMIT 1",lead_qualification_qwen3_4b_test_v2.csv
+your-generated-response,"SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899NgMAI'",lead_qualification_qwen3_4b_test_v2.csv
+recent discussions with the lead,"SELECT Body__c, CreatedDate FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897aPMAQ' ORDER BY CreatedDate DESC",lead_qualification_qwen3_4b_test_v2.csv
+your generation should follow the instructions,"SELECT Id, Title, FAQ_Answer__c FROM Knowledge__kav WHERE Title LIKE '%BANT%' OR FAQ_Answer__c LIKE '%BANT%'",lead_qualification_qwen3_4b_test_v2.csv
+your generation,"SELECT Id, Body__c, LeadId__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000897wyMAA'",lead_qualification_qwen3_4b_test_v2.csv
+user,"SELECT Id, LeadId__c, Body__c FROM VoiceCallTranscript__c WHERE LeadId__c = '00QWt00000899ApMAI' ORDER BY CreatedDate DESC",lead_qualification_qwen3_4b_test_v2.csv
