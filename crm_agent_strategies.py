@@ -338,14 +338,16 @@ def self_correction_reasoning(problem: list, possible_solution: str, llm_client)
     DO NOT CHANGE IT."""
     problem.append({"role": "user", "content": correction_prompt})
     try:
-        corrected_solution, usage = llm_client.generate(problem)
-        _total_tokens = usage.total_tokens
-        _completion_tokens = usage.completion_tokens
+        # corrected_solution, usage = llm_client.generate(problem)
+        corrected_solution = llm_client.generate(problem)
+        # _total_tokens = usage.total_tokens
+        # _completion_tokens = usage.completion_tokens
     except Exception as exception:
         print(f"Self correction action failed: {exception}")
         corrected_solution = {"content": possible_solution}
         _total_tokens, _completion_tokens = 0, 0
-    return corrected_solution['content'], _total_tokens, _completion_tokens
+    # return corrected_solution['content'], _total_tokens, _completion_tokens
+    return corrected_solution['content']
 
 
 RESPOND_RE = re.compile(r"<respond>(.*?)</respond>", re.DOTALL)
@@ -392,7 +394,6 @@ def build_self_reflection_prompt(situation: str, expert_actions_responses: list,
         print(f"Self reflection prompt failed: {exception}")
         derived_action = [e[0] for e in expert_actions_responses][0]
 
-    print(derived_action)
     return derived_action
 
 

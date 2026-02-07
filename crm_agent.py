@@ -3,6 +3,7 @@ from datasets import load_dataset
 import os
 from litellm import completion
 from crm_testing_utils import soql_to_sql
+from slm_fine_tuned import LoadFineTunedModel
 import re
 import time
 import pandas as pd
@@ -13,27 +14,36 @@ open_ai_key = os.environ["OPENAI_API_KEY"]
 RESPOND_RE = re.compile(r"<respond>(.*?)</respond>", re.DOTALL)
 
 class LiteLLMClient:
-    def __init__(self, model: str, provider: str):
+    def __init__(self, model: str, provider: str, fine_tune_path: str = None):
         self.model = model
         self.provider = provider
         self.api_base = None
         self.api_key = None
+        self.saved_model_path = fine_tune_path
         # self.temperature = 0
 
     def generate(self, messages: list):
+        response = ''
         if self.provider == "ollama":
             self.api_base = "http://localhost:11434"
         elif self.provider == "bedrock":
             self.model = f"bedrock/{self.model}"
         elif self.provider == "openai":
             self.api_key = open_ai_key
-        res = completion(
-            messages=messages,
-            model=self.model,
-            api_base=self.api_base,
-            api_key=self.api_key,
-            )
-        return res.choices[0].message.model_dump(), res.usage
+        elif self.provider == "fine_tune":
+            slm = LoadFineTunedModel(self.model, self.saved_model_path)
+            slm.load_fine_tune()
+            response = slm.generate_test_response(messages)
+        if self.provider != "fine_tune":
+            res = completion(
+                messages=messages,
+                model=self.model,
+                api_base=self.api_base,
+                api_key=self.api_key,
+                )
+            # res.choices[0].message.model_dump(), res.usage
+            response = res.choices[0].message.model_dump()
+        return response
 
 class Environment:
     def __init__(self):
@@ -159,9 +169,10 @@ class Agent:
         state["done"] |= self.should_halt(messages, state)
         if not state["done"]:
             try:
-                response, usage = self.client.generate(messages)
-                self.total_tokens += usage.total_tokens
-                self.completion_tokens += usage.completion_tokens
+                # response, usage = self.client.generate(messages)
+                response = self.client.generate(messages)
+                # self.total_tokens += usage.total_tokens
+                # self.completion_tokens += usage.completion_tokens
             except Exception as ex:
                 print(f"Action failed: {ex}")
                 response = {"content": "No response"}
@@ -292,31 +303,31 @@ def extract_final_from_messages(messages: list) -> str | None:
                 return m.group(1).strip()
     return None
 
-def halt_on_step(steps: int):
-    def fn(messages, state) -> bool:
-        return state["steps"] >= steps
+# def halt_on_step(steps: int):
+#     def fn(messages, state) -> bool:
+#         return state["steps"] >= steps
+#
+#     return fn
+#
+# def message_action_parser(message: str) -> dict[str, str]:
+#     content = message.strip()
+#
+#     resp = re.search(r'<execute>(.*?)</execute>', content, re.DOTALL)
+#     if resp:
+#         action = {"name": "execute", "content": resp.group(1).strip()}
+#         return action
+#
+#     resp = re.search(r'<respond>(.*?)</respond>', content, re.DOTALL)
+#     if resp:
+#         action = {"name": "respond", "content": resp.group(1).strip()}
+#         return action
+#     return {"name": "null", "content": ""}
 
-    return fn
-
-def message_action_parser(message: str) -> dict[str, str]:
-    content = message.strip()
-
-    resp = re.search(r'<execute>(.*?)</execute>', content, re.DOTALL)
-    if resp:
-        action = {"name": "execute", "content": resp.group(1).strip()}
-        return action
-
-    resp = re.search(r'<respond>(.*?)</respond>', content, re.DOTALL)
-    if resp:
-        action = {"name": "respond", "content": resp.group(1).strip()}
-        return action
-    return {"name": "null", "content": ""}
-
-def capture_results(llm_model: str, task_name: str, llm_type: str, number_of_tasks: int = 200, pause_time: int = 1):
-    ts_env = Environment()
-    ts_llm_client = LiteLLMClient(llm_model, llm_type)
-    ts_pg = PromptGenerator(ts_env.schema)
-    ts_agent = Agent(ts_llm_client, halt_on_step(2), message_action_parser, ts_pg)
-    ts_agent.run(ts_env, task_name, pause_time, number_of_tasks)
-
-    return ts_agent.message_states
+# def capture_results(llm_model: str, task_name: str, llm_type: str, number_of_tasks: int = 200, pause_time: int = 1):
+#     ts_env = Environment()
+#     ts_llm_client = LiteLLMClient(llm_model, llm_type)
+#     ts_pg = PromptGenerator(ts_env.schema)
+#     ts_agent = Agent(ts_llm_client, halt_on_step(2), message_action_parser, ts_pg)
+#     ts_agent.run(ts_env, task_name, pause_time, number_of_tasks)
+#
+#     return ts_agent.message_states
