@@ -1,0 +1,7 @@
+pandas~=2.3.3
+datasets~=4.4.2
+litellm~=1.73.6
+transformers~=5.0.0rc1
+peft~=0.18.0
+sentence-transformers~=5.1.2
+numpy~=2.3.4
