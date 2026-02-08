@@ -25,7 +25,20 @@ def message_action_parser(message: str) -> dict[str, str]:
 def main():
     parser = argparse.ArgumentParser(description="CRM Arena Agent Testing")
     parser.add_argument("--llm_model", required=True, type=str)
-    parser.add_argument("--task_name", required=True, type=str)
+    parser.add_argument("--task_name",
+                        required=True,
+                        type=str,
+                        choices=[
+                            'case_routing',
+                            'knowledg_qa',
+                            'lead_qualification',
+                            'lead_routing',
+                            'named_entity',
+                            'activity_priority',
+                            'monthly_trend_analysis',
+                            'top_issue_identification',
+                            'quote_approval'
+                        ])
     parser.add_argument("--llm_type", required=True, type=str)
     parser.add_argument("--number_of_tasks", required=True, type=int)
     parser.add_argument("--output_save_path", required=True, type=int)
