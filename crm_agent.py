@@ -10,7 +10,8 @@ import pandas as pd
 
 
 # os.environ["AWS_BEARER_TOKEN_BEDROCK"] = ""
-open_ai_key = os.environ["OPENAI_API_KEY"]
+# open_ai_key = os.environ["OPENAI_API_KEY"]
+open_ai_key = None
 RESPOND_RE = re.compile(r"<respond>(.*?)</respond>", re.DOTALL)
 
 class LiteLLMClient:
@@ -303,31 +304,31 @@ def extract_final_from_messages(messages: list) -> str | None:
                 return m.group(1).strip()
     return None
 
-# def halt_on_step(steps: int):
-#     def fn(messages, state) -> bool:
-#         return state["steps"] >= steps
-#
-#     return fn
-#
-# def message_action_parser(message: str) -> dict[str, str]:
-#     content = message.strip()
-#
-#     resp = re.search(r'<execute>(.*?)</execute>', content, re.DOTALL)
-#     if resp:
-#         action = {"name": "execute", "content": resp.group(1).strip()}
-#         return action
-#
-#     resp = re.search(r'<respond>(.*?)</respond>', content, re.DOTALL)
-#     if resp:
-#         action = {"name": "respond", "content": resp.group(1).strip()}
-#         return action
-#     return {"name": "null", "content": ""}
+def halt_on_step(steps: int):
+    def fn(messages, state) -> bool:
+        return state["steps"] >= steps
 
-# def capture_results(llm_model: str, task_name: str, llm_type: str, number_of_tasks: int = 200, pause_time: int = 1):
-#     ts_env = Environment()
-#     ts_llm_client = LiteLLMClient(llm_model, llm_type)
-#     ts_pg = PromptGenerator(ts_env.schema)
-#     ts_agent = Agent(ts_llm_client, halt_on_step(2), message_action_parser, ts_pg)
-#     ts_agent.run(ts_env, task_name, pause_time, number_of_tasks)
-#
-#     return ts_agent.message_states
+    return fn
+
+def message_action_parser(message: str) -> dict[str, str]:
+    content = message.strip()
+
+    resp = re.search(r'<execute>(.*?)</execute>', content, re.DOTALL)
+    if resp:
+        action = {"name": "execute", "content": resp.group(1).strip()}
+        return action
+
+    resp = re.search(r'<respond>(.*?)</respond>', content, re.DOTALL)
+    if resp:
+        action = {"name": "respond", "content": resp.group(1).strip()}
+        return action
+    return {"name": "null", "content": ""}
+
+def capture_results(llm_model: str, task_name: str, llm_type: str, number_of_tasks: int = 200, pause_time: int = 1):
+    ts_env = Environment()
+    ts_llm_client = LiteLLMClient(llm_model, llm_type)
+    ts_pg = PromptGenerator(ts_env.schema)
+    ts_agent = Agent(ts_llm_client, halt_on_step(2), message_action_parser, ts_pg)
+    ts_agent.run(ts_env, task_name, pause_time, number_of_tasks)
+
+    return ts_agent.message_states

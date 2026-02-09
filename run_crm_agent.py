@@ -1,26 +1,5 @@
 import argparse
-from crm_agent import Environment, PromptGenerator, LiteLLMClient, Agent
-import re
-
-def halt_on_step(steps: int):
-    def fn(messages, state) -> bool:
-        return state["steps"] >= steps
-
-    return fn
-
-def message_action_parser(message: str) -> dict[str, str]:
-    content = message.strip()
-
-    resp = re.search(r'<execute>(.*?)</execute>', content, re.DOTALL)
-    if resp:
-        action = {"name": "execute", "content": resp.group(1).strip()}
-        return action
-
-    resp = re.search(r'<respond>(.*?)</respond>', content, re.DOTALL)
-    if resp:
-        action = {"name": "respond", "content": resp.group(1).strip()}
-        return action
-    return {"name": "null", "content": ""}
+from crm_agent import Environment, PromptGenerator, LiteLLMClient, Agent, halt_on_step, message_action_parser
 
 def main():
     parser = argparse.ArgumentParser(description="CRM Arena Agent Testing")
@@ -30,7 +9,7 @@ def main():
                         type=str,
                         choices=[
                             'case_routing',
-                            'knowledg_qa',
+                            'knowledge_qa',
                             'lead_qualification',
                             'lead_routing',
                             'named_entity',
@@ -41,7 +20,7 @@ def main():
                         ])
     parser.add_argument("--llm_type", required=True, type=str)
     parser.add_argument("--number_of_tasks", required=True, type=int)
-    parser.add_argument("--output_save_path", required=True, type=int)
+    parser.add_argument("--output_save_path", required=True, type=str)
     parser.add_argument("--fine_tune_path", required=False, type=str)
     parser.add_argument("--pause_time", required=False, type=int)
 
