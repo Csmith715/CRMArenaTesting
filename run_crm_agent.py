@@ -29,6 +29,7 @@ def main():
     ts_env = Environment()
     ts_llm_client = LiteLLMClient(args.llm_model, args.llm_type, args.fine_tune_path)
     ts_pg = PromptGenerator(ts_env.schema)
+    # halt_on_step set to 6 to encourage model to think
     ts_agent = Agent(ts_llm_client, halt_on_step(6), message_action_parser, ts_pg)
     ts_agent.run(ts_env, args.task_name, args.pause_time, args.number_of_tasks)
     merged_df = ts_agent.collect_agent_outputs()

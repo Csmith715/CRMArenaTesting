@@ -34,7 +34,8 @@ class LiteLLMClient:
         elif self.provider == "fine_tune":
             slm = LoadFineTunedModel(self.model, self.saved_model_path)
             slm.load_fine_tune()
-            response = slm.generate_test_response(messages)
+            slm_response = slm.generate_test_response(messages)
+            response = {'content': slm_response}
         if self.provider != "fine_tune":
             res = completion(
                 messages=messages,
