@@ -40,7 +40,7 @@ def main():
     except OSError as e:
         print(f"Error creating directory {output_path.parent}: {e}")
         return
-    merged_df.to_csv(args.output_path, index=False)
+    merged_df.to_csv(output_path, index=False)
 
 
 if __name__ == "__main__":
