@@ -21,6 +21,9 @@ class LiteLLMClient:
         self.api_base = None
         self.api_key = None
         self.saved_model_path = fine_tune_path
+        if self.provider == "fine_tune":
+            self.slm = slm = LoadFineTunedModel(self.model, self.saved_model_path)
+            self.slm.load_fine_tune()
         # self.temperature = 0
 
     def generate(self, messages: list):
@@ -32,9 +35,9 @@ class LiteLLMClient:
         elif self.provider == "openai":
             self.api_key = open_ai_key
         elif self.provider == "fine_tune":
-            slm = LoadFineTunedModel(self.model, self.saved_model_path)
-            slm.load_fine_tune()
-            slm_response = slm.generate_test_response(messages)
+            # slm = LoadFineTunedModel(self.model, self.saved_model_path)
+            # slm.load_fine_tune()
+            slm_response = self.slm.generate_test_response(messages)
             response = {'content': slm_response}
         if self.provider != "fine_tune":
             res = completion(

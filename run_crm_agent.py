@@ -1,5 +1,6 @@
 import argparse
 from crm_agent import Environment, PromptGenerator, LiteLLMClient, Agent, halt_on_step, message_action_parser
+from pathlib import Path
 
 def main():
     parser = argparse.ArgumentParser(description="CRM Arena Agent Testing")
@@ -33,7 +34,13 @@ def main():
     ts_agent = Agent(ts_llm_client, halt_on_step(6), message_action_parser, ts_pg)
     ts_agent.run(ts_env, args.task_name, args.pause_time, args.number_of_tasks)
     merged_df = ts_agent.collect_agent_outputs()
-    merged_df.to_csv(args.output_save_path, index=False)
+    output_path = Path(args.output_save_path)
+    try:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+    except OSError as e:
+        print(f"Error creating directory {output_path.parent}: {e}")
+        return
+    merged_df.to_csv(args.output_path, index=False)
 
 
 if __name__ == "__main__":
